@@ -22,7 +22,14 @@ $messages['qqq'] = array(
 	'hovergallery-desc' => '{{desc|name=HoverGallery|url=https://www.mediawiki.org/wiki/Extension:HoverGallery}}',
 );
 
-/** Spanish
+/** German (Deutsch)
+ * @author Metalhead64
+ */
+$messages['de'] = array(
+	'hovergallery-desc' => 'Ergänzt das <code>&lt;hovergallery&gt;</code>-Tag zum Erstellen von Galerien wie Standardgalerien. Beim Überfahren der Maus über die Vorschaubilder werden die Bilder in voller Größe angezeigt.',
+);
+
+/** Spanish (español)
  * @author Luis Felipe Schenone
  */
 $messages['es'] = array(
