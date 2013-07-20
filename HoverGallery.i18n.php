@@ -35,3 +35,24 @@ $messages['de'] = array(
 $messages['es'] = array(
 	'hovergallery-desc' => 'Agrega una etiqueta <code>&lt;hovergallery&gt;</code> que crea galerías como las estándar, excepto que cuando el mouse pasa sobre los thumbnails, se muestra la imagen completa',
 );
+
+/** Galician (galego)
+ * @author Toliño
+ */
+$messages['gl'] = array(
+	'hovergallery-desc' => 'Engade unha etiqueta <code>&lt;hovergallery&gt;</code> que crea galerías como as estándar, agás que ao pasar o rato por riba das miniaturas se mostran as imaxes a tamaño completo',
+);
+
+/** Japanese (日本語)
+ * @author Shirayuki
+ */
+$messages['ja'] = array(
+	'hovergallery-desc' => '縮小版画像にマウスオーバーすると大きい画像が表示される、標準的なギャラリーを作成する <code>&lt;hovergallery&gt;</code> タグを追加する',
+);
+
+/** Macedonian (македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'hovergallery-desc' => 'Додава ознака <code>&lt;hovergallery&gt;</code> што прави галерии како стандардните, со таа разлика што сликите се прикажуваат во полна големина кога ќе отидете со глувчето врз нив',
+);
