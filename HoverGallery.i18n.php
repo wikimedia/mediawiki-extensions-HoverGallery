@@ -36,6 +36,13 @@ $messages['es'] = array(
 	'hovergallery-desc' => 'Agrega una etiqueta <code>&lt;hovergallery&gt;</code> que crea galerías como las estándar, excepto que cuando el mouse pasa sobre los thumbnails, se muestra la imagen completa',
 );
 
+/** French (français)
+ * @author Wyz
+ */
+$messages['fr'] = array(
+	'hovergallery-desc' => 'Ajoute une balise <code>&lt;hovergallery&gt;</code> qui crée des galeries comme les galeries standards, sauf que quand on survole les vignettes avec la souris, les images en pleine taille sont affichées',
+);
+
 /** Galician (galego)
  * @author Toliño
  */
