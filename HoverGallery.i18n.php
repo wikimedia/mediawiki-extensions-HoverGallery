@@ -63,3 +63,10 @@ $messages['ja'] = array(
 $messages['mk'] = array(
 	'hovergallery-desc' => 'Додава ознака <code>&lt;hovergallery&gt;</code> што прави галерии како стандардните, со таа разлика што сликите се прикажуваат во полна големина кога ќе отидете со глувчето врз нив',
 );
+
+/** Swedish (svenska)
+ * @author Jopparn
+ */
+$messages['sv'] = array(
+	'hovergallery-desc' => 'Lägger till en <code>&lt;hovergallery&gt;</code>-tag som skapar gallerier likt standardgallerierna, med skillnaden att när musen hovrar över miniatyrerna, visas de fullstora bilderna',
+);
