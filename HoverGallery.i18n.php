@@ -64,6 +64,13 @@ $messages['mk'] = array(
 	'hovergallery-desc' => 'Додава ознака <code>&lt;hovergallery&gt;</code> што прави галерии како стандардните, со таа разлика што сликите се прикажуваат во полна големина кога ќе отидете со глувчето врз нив',
 );
 
+/** tarandíne (tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'hovergallery-desc' => "Aggiunge 'nu tag <code>&lt;hovergallery&gt;</code> ca ccreje le gallerie cumme a le standàrd, tranne ca quanne pase sus cu 'u sciorge sus a le miniature, le immaggine avènene fatte vedè a dimenzione normale",
+);
+
 /** Swedish (svenska)
  * @author Jopparn
  */
