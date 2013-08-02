@@ -30,10 +30,11 @@ $messages['de'] = array(
 );
 
 /** Spanish (español)
+ * @author Fitoschido
  * @author Luis Felipe Schenone
  */
 $messages['es'] = array(
-	'hovergallery-desc' => 'Agrega una etiqueta <code>&lt;hovergallery&gt;</code> que crea galerías como las estándar, excepto que cuando el mouse pasa sobre los thumbnails, se muestra la imagen completa',
+	'hovergallery-desc' => 'Añade una etiqueta <code>&lt;hovergallery&gt;</code> que crea galerías como las estándares, excepto que cuando el ratón pasa sobre las miniaturas se muestra la imagen completa',
 );
 
 /** French (français)
