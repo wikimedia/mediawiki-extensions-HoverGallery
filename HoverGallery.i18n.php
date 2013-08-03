@@ -22,6 +22,13 @@ $messages['qqq'] = array(
 	'hovergallery-desc' => '{{desc|name=HoverGallery|url=https://www.mediawiki.org/wiki/Extension:HoverGallery}}',
 );
 
+/** Asturian (asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'hovergallery-desc' => "Amiesta una etiqueta <code>&lt;hovergallery&gt;</code> que crea galeríes como les estándar, esceuto que cuando'l mur pasa peles miniatures, vese la imaxe a tamañu completu",
+);
+
 /** German (Deutsch)
  * @author Metalhead64
  */
