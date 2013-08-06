@@ -85,3 +85,10 @@ $messages['roa-tara'] = array(
 $messages['sv'] = array(
 	'hovergallery-desc' => 'Lägger till en <code>&lt;hovergallery&gt;</code>-tag som skapar gallerier likt standardgallerierna, med skillnaden att när musen hovrar över miniatyrerna, visas de fullstora bilderna',
 );
+
+/** Ukrainian (українська)
+ * @author Andriykopanytsia
+ */
+$messages['uk'] = array(
+	'hovergallery-desc' => 'Додає мітку <code>&lt;hovergallery&gt;</code>, що створює галереї на кшталт стандартних, крім того, при наведенні покажчика миші на мініатюри відображається повний розмір зображення',
+);
