@@ -73,6 +73,13 @@ $messages['mk'] = array(
 	'hovergallery-desc' => 'Додава ознака <code>&lt;hovergallery&gt;</code> што прави галерии како стандардните, со таа разлика што сликите се прикажуваат во полна големина кога ќе отидете со глувчето врз нив',
 );
 
+/** Occitan (occitan)
+ * @author Cedric31
+ */
+$messages['oc'] = array(
+	'hovergallery-desc' => 'Apond una balisa <code>&lt;hovergallery&gt;</code> que crèa de galariás coma las galariás estandardas, levat que quand se susvòla las vinhetas amb la mirga, los imatges en plena talha son afichadas',
+);
+
 /** tarandíne (tarandíne)
  * @author Joetaras
  */
