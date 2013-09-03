@@ -59,6 +59,13 @@ $messages['gl'] = array(
 	'hovergallery-desc' => 'Engade unha etiqueta <code>&lt;hovergallery&gt;</code> que crea galerías como as estándar, agás que ao pasar o rato por riba das miniaturas se mostran as imaxes a tamaño completo',
 );
 
+/** Italian (italiano)
+ * @author Gianfranco
+ */
+$messages['it'] = array(
+	'hovergallery-desc' => 'Aggiunge un tag <code>&lt;hovergallery&gt;</code> con cui si creano gallerie che sarebbero come quelle standard, se non fosse che su queste, quando il mouse passa sopra le miniature, vengono visualizzate le immagini a dimensione intera',
+);
+
 /** Japanese (日本語)
  * @author Shirayuki
  */
