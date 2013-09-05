@@ -87,6 +87,13 @@ $messages['oc'] = array(
 	'hovergallery-desc' => 'Apond una balisa <code>&lt;hovergallery&gt;</code> que crèa de galariás coma las galariás estandardas, levat que quand se susvòla las vinhetas amb la mirga, los imatges en plena talha son afichadas',
 );
 
+/** Brazilian Portuguese (português do Brasil)
+ * @author Cainamarques
+ */
+$messages['pt-br'] = array(
+	'hovergallery-desc' => 'Adiciona um tag <code>&lt;hovergallery&gt;</code> que cria galerias igual às padrões, a exceção que quando o cursor do mouse passa sobre as miniaturas, as imagens são exibidas no tamanho original',
+);
+
 /** tarandíne (tarandíne)
  * @author Joetaras
  */
