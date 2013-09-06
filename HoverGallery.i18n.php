@@ -73,6 +73,13 @@ $messages['ja'] = array(
 	'hovergallery-desc' => '縮小版画像にマウスオーバーすると大きい画像が表示される、標準的なギャラリーを作成する <code>&lt;hovergallery&gt;</code> タグを追加する',
 );
 
+/** Colognian (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'hovergallery-desc' => 'Deihd ene Befähl <code lang="en" xml:lang="en">&lt;hovergallery&gt;</code> en et Wikki, woh me Jalleriehje vun Beldere aanzeije lohße kann, die wi jewöhnlesch ußsin ußer wam_mer met der Muuß övver de klein Bellscher jeiht, dat mer de jruuße Belder aanjezeisch kritt.',
+);
+
 /** Macedonian (македонски)
  * @author Bjankuloski06
  */
