@@ -108,6 +108,13 @@ $messages['roa-tara'] = array(
 	'hovergallery-desc' => "Aggiunge 'nu tag <code>&lt;hovergallery&gt;</code> ca ccreje le gallerie cumme a le standàrd, tranne ca quanne pase sus cu 'u sciorge sus a le miniature, le immaggine avènene fatte vedè a dimenzione normale",
 );
 
+/** Russian (русский)
+ * @author Okras
+ */
+$messages['ru'] = array(
+	'hovergallery-desc' => 'Добавляет тег <code>&lt;hovergallery&gt;</code>, который создает галереи наподобие стандартных, за исключением того, что при наведении указателя мыши на эскизы показываются полноразмерные изображения',
+);
+
 /** Swedish (svenska)
  * @author Jopparn
  */
