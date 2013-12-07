@@ -87,6 +87,13 @@ $messages['mk'] = array(
 	'hovergallery-desc' => 'Додава ознака <code>&lt;hovergallery&gt;</code> што прави галерии како стандардните, со таа разлика што сликите се прикажуваат во полна големина кога ќе отидете со глувчето врз нив',
 );
 
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'hovergallery-desc' => 'Voegt het label <code>&lt;hovergallery&gt;</code> toe dat galerijen aanmaakt, zoals de standaard galerijen, maar als de muisaanwijzer er boven zweeft, wordt de volledige afbeelding weergegeven',
+);
+
 /** Occitan (occitan)
  * @author Cedric31
  */
