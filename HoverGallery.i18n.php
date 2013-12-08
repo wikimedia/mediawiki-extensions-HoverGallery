@@ -135,3 +135,10 @@ $messages['sv'] = array(
 $messages['uk'] = array(
 	'hovergallery-desc' => 'Додає мітку <code>&lt;hovergallery&gt;</code>, що створює галереї на кшталт стандартних, крім того, при наведенні покажчика миші на мініатюри відображається повний розмір зображення',
 );
+
+/** Simplified Chinese (中文（简体）‎)
+ * @author Yfdyh000
+ */
+$messages['zh-hans'] = array(
+	'hovergallery-desc' => '添加一个<code>&lt;hovergallery&gt;</code>标签，它可创建一个标准的画廊（gallery），不同之处在于鼠标悬停在缩略图时会显示全尺寸的图像',
+);
