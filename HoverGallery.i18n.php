@@ -59,6 +59,13 @@ $messages['gl'] = array(
 	'hovergallery-desc' => 'Engade unha etiqueta <code>&lt;hovergallery&gt;</code> que crea galerías como as estándar, agás que ao pasar o rato por riba das miniaturas se mostran as imaxes a tamaño completo',
 );
 
+/** Upper Sorbian (hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'hovergallery-desc' => 'Přidawa element <code>&lt;hovergallery&gt;</code>, kotryž galerije kaž standardne galerije wutworja, chibazo kursor myški je nad miniaturami, potom so wobrazy w połnej wulkosći pokazuja.',
+);
+
 /** Italian (italiano)
  * @author Gianfranco
  */
