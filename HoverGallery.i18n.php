@@ -45,6 +45,13 @@ $messages['es'] = array(
 	'hovergallery-desc' => 'Añade una etiqueta <code>&lt;hovergallery&gt;</code> que crea galerías como las estándares, excepto que cuando el ratón pasa sobre las miniaturas se muestra la imagen completa',
 );
 
+/** Persian (فارسی)
+ * @author Armin1392
+ */
+$messages['fa'] = array(
+	'hovergallery-desc' => 'اضافه کردن برچسب <code>&lt;hovergallery&gt;</code> که گالری‌هایی مثل نوع‌های استاندارد ایجاد می کند، انتظار می‌رود که ماوس بیشتر از تصاویر کوچک بلاتکلیف بماند، اندازهٔ کامل عکس‌ها نمایش داده شده‌اند.',
+);
+
 /** French (français)
  * @author Wyz
  */
