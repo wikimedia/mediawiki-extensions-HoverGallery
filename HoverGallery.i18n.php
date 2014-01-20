@@ -87,6 +87,13 @@ $messages['ja'] = array(
 	'hovergallery-desc' => '縮小版画像にマウスオーバーすると大きい画像が表示される、標準的なギャラリーを作成する <code>&lt;hovergallery&gt;</code> タグを追加する',
 );
 
+/** Korean (한국어)
+ * @author Priviet
+ */
+$messages['ko'] = array(
+	'hovergallery-desc' => '마우스를 섬네일에 갖다댈 때 이미지가 표시되는 것을 제외하고 표준의 갤러리를 만드는 <code>&lt;hovergallery&gt;</code>를 추가',
+);
+
 /** Colognian (Ripoarisch)
  * @author Purodha
  */
