@@ -31,10 +31,11 @@ $messages['ast'] = array(
 );
 
 /** German (Deutsch)
+ * @author Kghbln
  * @author Metalhead64
  */
 $messages['de'] = array(
-	'hovergallery-desc' => 'Ergänzt das <code>&lt;hovergallery&gt;</code>-Tag zum Erstellen von Galerien wie Standardgalerien. Beim Überfahren der Maus über die Vorschaubilder werden die Bilder in voller Größe angezeigt.',
+	'hovergallery-desc' => 'Ergänzt das Tag <code>&lt;hovergallery&gt;</code> zum Erstellen von Bildergalerien. Beim Führen der Maus über die Vorschaubilder werden diese in voller Größe angezeigt',
 );
 
 /** Spanish (español)
