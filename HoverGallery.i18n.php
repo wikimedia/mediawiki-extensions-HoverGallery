@@ -20,7 +20,7 @@ $messages['en'] = array(
  * @author Shirayuki
  */
 $messages['qqq'] = array(
-	'hovergallery-desc' => '{{desc|name=Hover Gallery|url=http://www.mediawiki.org/wiki/Extension:HoverGallery}}',
+	'hovergallery-desc' => '{{desc|name=HoverGallery|url=http://www.mediawiki.org/wiki/Extension:HoverGallery}}',
 );
 
 /** Asturian (asturianu)

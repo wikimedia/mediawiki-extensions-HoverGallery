@@ -13,7 +13,7 @@
 			var thumbIndex = $.inArray( this, thumbs );
 
 			// Get the corresponding full-size image
-			fullImage = $('div.hover-gallery').children().eq( thumbIndex );
+			fullImage = $('div.hover-gallery').children().eq( thumbIndex ).children();
 
 			// Calculate the position of the mouse
 			mouseX = event.clientX;

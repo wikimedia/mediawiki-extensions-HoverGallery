@@ -1,20 +1,10 @@
 <?php
-/**
- * HoverGallery extension
- *
- * @file
- * @ingroup Extensions
- *
- * @author Luis Felipe Schenone <schenonef@gmail.com>
- * @license GPL v2 or later
- * @version 1.0
- */
 
 $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'HoverGallery',
 	'descriptionmsg' => 'hovergallery-desc',
-	'version' => 1,
+	'version' => 0.2,
 	'author' => 'Luis Felipe Schenone',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:HoverGallery',
 );
@@ -30,5 +20,5 @@ $wgResourceModules['ext.HoverGallery'] = array(
 $wgExtensionMessagesFiles['HoverGallery'] = __DIR__ . '/HoverGallery.i18n.php';
 $wgAutoloadClasses['HoverGallery'] = __DIR__ . '/HoverGallery.body.php';
 
-$wgHooks['BeforePageDisplay'][] = 'HoverGallery::addResources';
+$wgHooks['BeforePageDisplay'][] = 'HoverGallery::addModule';
 $wgHooks['ParserFirstCallInit'][] = 'HoverGallery::setParserHook';

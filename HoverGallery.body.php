@@ -2,48 +2,38 @@
 
 class HoverGallery {
 
-	static function addResources( & $out ) {
-		$out->addModules( 'ext.HoverGallery' );
+	public static function addModule( &$output ) {
+		$output->addModules( 'ext.HoverGallery' );
 		return true;
 	}
 
-	static function setParserHook( $parser ) {
+	public static function setParserHook( &$parser ) {
 		$parser->setHook( 'hovergallery', 'HoverGallery::renderGallery' );
 		return true;
 	}
 
-	function renderGallery( $input, array $args, Parser $parser, PPFrame $frame ) {
+	public static function renderGallery( $input, array $ARGS, Parser $parser, PPFrame $frame ) {
 
 		$maxhoverwidth = '100%';
 		$maxhoverheight = '100%';
-		if ( array_key_exists( 'hoversize', $args ) ) {
-			$maxhoverwidth = $args['hoversize'] . 'px';
-			$maxhoverheight = $args['hoversize'] . 'px';
+		if ( array_key_exists( 'hoversize', $ARGS ) ) {
+			$maxhoverwidth = $ARGS['hoversize'] . 'px';
+			$maxhoverheight = $ARGS['hoversize'] . 'px';
 		}
-		if ( array_key_exists( 'maxhoverwidth', $args ) ) {
-			$maxhoverwidth = $args['maxhoverwidth'] . 'px';
+		if ( array_key_exists( 'maxhoverwidth', $ARGS ) ) {
+			$maxhoverwidth = $ARGS['maxhoverwidth'] . 'px';
 		}
-		if ( array_key_exists( 'maxhoverheight', $args ) ) {
-			$maxhoverheight = $args['maxhoverheight'] . 'px';
-		}
+		if ( array_key_exists( 'maxhoverheight', $ARGS ) ) {
+			$maxhoverheight = $ARGS['maxhoverheight'] . 'px';
+		}			
 
 		$normalGallery = $parser->recursiveTagParse( '<gallery>' . $input . '</gallery>' );
 
 		$hiddenGallery = '<div class="hover-gallery">';
-		$filenames = explode( "\n", $input );
-		$filenames = array_filter( $filenames );
-		foreach ( $filenames as $filename ) {
-			if ( $start = strpos( $filename, ":" ) ) {
-				$filename = substr( $filename, $start + 1 ); // Remove the namespace
-			}
-			if ( strpos( $filename, "|" ) ) {
-				$filename = strstr( $filename, "|", true ); // Remove the parameters
-			}
-			$file = wfFindFile( $filename );
-			if ( is_object( $file ) ) {
-				$link = $file->getFullUrl();
-				$hiddenGallery .= '<img src="' . $link . '" style="max-width: ' . $maxhoverwidth . '; max-height: ' . $maxhoverheight . '" />';
-			}
+		$FILENAMES = explode( "\n", $input );
+		$FILENAMES = array_filter( $FILENAMES );
+		foreach ( $FILENAMES as $filename ) {
+			$hiddenGallery .= $parser->recursiveTagParse( '[[' . $filename . ']]' );
 		}
 		$hiddenGallery .= '</div>';
 
