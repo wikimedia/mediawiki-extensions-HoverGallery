@@ -4,7 +4,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'HoverGallery',
 	'descriptionmsg' => 'hovergallery-desc',
-	'version' => 0.2,
+	'version' => '0.3.0',
 	'author' => 'Luis Felipe Schenone',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:HoverGallery',
 );
@@ -17,6 +17,7 @@ $wgResourceModules['ext.HoverGallery'] = array(
 	'remoteExtPath' => 'HoverGallery',
 );
 
+$wgMessagesDirs['HoverGallery'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['HoverGallery'] = __DIR__ . '/HoverGallery.i18n.php';
 $wgAutoloadClasses['HoverGallery'] = __DIR__ . '/HoverGallery.body.php';
 
