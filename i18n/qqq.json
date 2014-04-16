@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Raimond Spekking",
-            "Shirayuki"
-        ]
-    },
-    "hovergallery-desc": "{{desc|name=HoverGallery|url=http://www.mediawiki.org/wiki/Extension:HoverGallery}}"
+	"@metadata": {
+		"authors": [
+			"Raimond Spekking",
+			"Shirayuki"
+		]
+	},
+	"hovergallery-desc": "{{desc|name=HoverGallery|url=http://www.mediawiki.org/wiki/Extension:HoverGallery}}"
 }
