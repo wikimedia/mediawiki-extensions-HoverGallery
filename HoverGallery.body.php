@@ -8,11 +8,11 @@ class HoverGallery {
 	}
 
 	public static function setParserHook( &$parser ) {
-		$parser->setHook( 'hovergallery', 'HoverGallery::renderGallery' );
+		$parser->setHook( 'hovergallery', 'HoverGallery::render' );
 		return true;
 	}
 
-	public static function renderGallery( $input, array $ARGS, Parser $parser, PPFrame $frame ) {
+	public static function render( $input, array $ARGS, Parser $parser, PPFrame $frame ) {
 
 		$maxhoverwidth = '';
 		$maxhoverheight = '';
@@ -29,8 +29,8 @@ class HoverGallery {
 
 		$normalGallery = $parser->recursiveTagParse( '<gallery>' . $input . '</gallery>' );
 
-		$hiddenGallery = '<div class="hover-gallery">';
-		$FILENAMES = explode( "\n", $input );
+		$hiddenGallery = '<div class="hovergallery">';
+		$FILENAMES = explode( PHP_EOL, trim( $input ) );
 		$FILENAMES = array_filter( $FILENAMES );
 		foreach ( $FILENAMES as $filename ) {
 			if ( $maxhoverwidth or $maxhoverheight ) {

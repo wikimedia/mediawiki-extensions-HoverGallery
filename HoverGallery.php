@@ -4,7 +4,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'HoverGallery',
 	'descriptionmsg' => 'hovergallery-desc',
-	'version' => '0.3.0',
+	'version' => '0.4',
 	'author' => 'Luis Felipe Schenone',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:HoverGallery',
 );

@@ -1,6 +1,7 @@
-div.hover-gallery img {
+div.hovergallery img {
 	border-radius: 5px;
 	display: none;
+	pointer-events: none;
 	position: fixed;
 	z-index: 99;
 }
