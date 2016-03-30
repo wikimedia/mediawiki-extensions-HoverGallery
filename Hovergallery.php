@@ -14,7 +14,7 @@ $wgResourceModules['ext.HoverGallery'] = array(
 	'styles' => 'HoverGallery.css',
 	'position' => 'top',
 	'localBasePath' => __DIR__,
-	'remoteExtPath' => 'HoverGallery',
+	'remoteExtPath' => 'Hovergallery',
 );
 
 $wgMessagesDirs['HoverGallery'] = __DIR__ . '/i18n';

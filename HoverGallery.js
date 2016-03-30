@@ -1,6 +1,6 @@
-$( function () {
+jQuery( function ( $ ) {
 
-	var thumbs, mouseX, mouseY, clientWidth, clientHeight, fullImage, fullImageWidth, fullImageHeight, fullImageX, fullImageY, fullImageWidth, fullImageHeight;
+	var thumbs, mouseX, mouseY, clientWidth, clientHeight, fullImage, fullImageWidth, fullImageHeight, fullImageX, fullImageY;
 
 	// Get all the thumbnails
 	// The normal gallery is right before the hidden gallery, so just move to it and select all the images it contains
@@ -40,4 +40,4 @@ $( function () {
 	}).mouseleave(function(){
 		fullImage.hide();
 	});
-});
+}( jQuery ) );
