@@ -2,12 +2,12 @@
 
 class HoverGallery {
 
-	public static function addModule( &$output ) {
+	public static function onBeforePageDisplay( &$output ) {
 		$output->addModules( 'ext.HoverGallery' );
 		return true;
 	}
 
-	public static function setParserHook( &$parser ) {
+	public static function onParserFirstCallInit( &$parser ) {
 		$parser->setHook( 'hovergallery', 'HoverGallery::render' );
 		return true;
 	}
