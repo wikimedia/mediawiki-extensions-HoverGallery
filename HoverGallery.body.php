@@ -30,6 +30,7 @@ class HoverGallery {
 		$FILEURLS = array();
 		$FILENAMES = array_filter( explode( PHP_EOL, trim( $input ) ) );
 		foreach ( $FILENAMES as $filename ) {
+			$filename = strtok( $filename, '|' ); // Remove the options
 			$title = Title::newFromText( $filename, NS_FILE );
 			$file = wfLocalFile( $title );
 			$FILEURLS[] = $file->getFullUrl();
