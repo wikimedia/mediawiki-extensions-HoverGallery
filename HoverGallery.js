@@ -8,7 +8,7 @@ var HoverGallery = {
 		$( '.gallery img' ).hover( HoverGallery.onMouseEnter, HoverGallery.onMouseLeave );
 	},
 
-	onMouseEnter: function ( event ) {
+	onMouseEnter: function () {
 		var gallery = $( this ).closest( '.gallery' ),
 			fileUrls = gallery.data( 'hovergallery-fileurls' ),
 			maxHoverWidth = gallery.data( 'hovergallery-maxhoverwidth' ),
@@ -29,7 +29,7 @@ var HoverGallery = {
 		$( 'body' ).append( image );
 	},
 
-	onMouseLeave: function ( event ) {
+	onMouseLeave: function () {
 		$( 'body .hoverimage' ).remove();
 	}
 };
