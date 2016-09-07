@@ -1,43 +1,37 @@
-jQuery( function ( $ ) {
+var HoverGallery = {
 
-	var thumbs, mouseX, mouseY, clientWidth, clientHeight, fullImage, fullImageWidth, fullImageHeight, fullImageX, fullImageY;
+	init: function () {
+		HoverGallery.bind();
+	},
 
-	// Get all the thumbnails
-	// The normal gallery is right before the hidden gallery, so just move to it and select all the images it contains
-	thumbs = $( 'div.hovergallery' ).prev().find( 'img' );
+	bind: function () {
+		$( '.gallery img' ).hover( HoverGallery.onMouseEnter, HoverGallery.onMouseLeave );
+	},
 
-	thumbs.mouseenter( function ( event ) {
+	onMouseEnter: function ( event ) {
+		var gallery = $( this ).closest( '.gallery' ),
+			fileUrls = gallery.data( 'hovergallery-fileurls' ),
+			maxHoverWidth = gallery.data( 'hovergallery-maxhoverwidth' ),
+			maxHoverHeight = gallery.data( 'hovergallery-maxhoverheight' );
 
 		// Determine which of the thumbs is it
-		var thumbIndex = $.inArray( this, thumbs );
+		var thumbs = $( 'img', gallery ),
+			thumbIndex = $.inArray( this, thumbs );
 
-		// Get the corresponding full-size image, and its width and height
-		fullImage = $( 'div.hovergallery' ).children().eq( thumbIndex ).children();
-
-		// Calculate the position of the mouse
-		mouseX = event.clientX;
-		mouseY = event.clientY;
-
-		// Now the position of the top left corner of the full image
-		fullImageX = mouseX + 10;
-		fullImageY = mouseY + 10;
-
-		// Make sure the image doesnt go off the screen
-		clientWidth = document.body.clientWidth;
-		clientHeight = document.body.clientHeight;
-		fullImageWidth = fullImage.width();
-		fullImageHeight = fullImage.height();
-		if ( mouseX + fullImageWidth > clientWidth ) {
-			fullImageX -= 20 + mouseX + fullImageWidth - clientWidth;
-		}
-		if ( mouseY + fullImageHeight > clientHeight ) {
-			fullImageY -= 20 + mouseY + fullImageHeight - clientHeight;
-		}
+		// Get the corresponding URL and build the image
+		var url = fileUrls[ thumbIndex ],
+			image = $( '<img>' ).attr( 'src', url ).addClass( 'hoverimage' ).css({
+				'max-width': maxHoverWidth + 'px',
+				'max-height': maxHoverHeight + 'px'
+			});
 
 		// Show the image
-		fullImage.css({ 'top': fullImageY, 'left': fullImageX }).show();
+		$( 'body' ).append( image );
+	},
 
-	}).mouseleave(function(){
-		fullImage.hide();
-	});
-}( jQuery ) );
+	onMouseLeave: function ( event ) {
+		$( 'body .hoverimage' ).remove();
+	}
+};
+
+$( HoverGallery.init );

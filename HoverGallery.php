@@ -2,20 +2,20 @@
 
 class HoverGallery {
 
-	public static function onBeforePageDisplay( &$output ) {
-		$output->addModules( 'ext.HoverGallery' );
+	static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
+		$out->addModules( 'ext.HoverGallery' );
 		return true;
 	}
 
-	public static function onParserFirstCallInit( &$parser ) {
+	static function onParserFirstCallInit( Parser &$parser ) {
 		$parser->setHook( 'hovergallery', 'HoverGallery::render' );
 		return true;
 	}
 
-	public static function render( $input, array $ARGS, Parser $parser, PPFrame $frame ) {
+	static function render( $input, array $ARGS, Parser $parser, PPFrame $frame ) {
 
-		$maxhoverwidth = '';
-		$maxhoverheight = '';
+		$maxhoverwidth = 640;
+		$maxhoverheight = 640;
 		if ( array_key_exists( 'maxhoversize', $ARGS ) ) {
 			$maxhoverwidth = $ARGS['maxhoversize'];
 			$maxhoverheight = $ARGS['maxhoversize'];
@@ -25,22 +25,24 @@ class HoverGallery {
 		}
 		if ( array_key_exists( 'maxhoverheight', $ARGS ) ) {
 			$maxhoverheight = $ARGS['maxhoverheight'];
-		}			
-
-		$normalGallery = $parser->recursiveTagParse( '<gallery>' . $input . '</gallery>' );
-
-		$hiddenGallery = '<div class="hovergallery">';
-		$FILENAMES = explode( PHP_EOL, trim( $input ) );
-		$FILENAMES = array_filter( $FILENAMES );
-		foreach ( $FILENAMES as $filename ) {
-			if ( $maxhoverwidth or $maxhoverheight ) {
-				$hiddenGallery .= $parser->recursiveTagParse( '[[' . $filename . '|' . $maxhoverwidth . 'x' . $maxhoverheight . 'px]]' );
-			} else {
-				$hiddenGallery .= $parser->recursiveTagParse( '[[' . $filename . ']]' );
-			}
 		}
-		$hiddenGallery .= '</div>';
 
-		return $normalGallery . $hiddenGallery;
+		$FILEURLS = array();
+		$FILENAMES = array_filter( explode( PHP_EOL, trim( $input ) ) );
+		foreach ( $FILENAMES as $filename ) {
+			$title = Title::newFromText( $filename );
+			$file = wfLocalFile( $title );
+			$FILEURLS[] = $file->getFullUrl();
+		}
+
+		$fileUrls = json_encode( $FILEURLS );
+		$fileUrls = htmlspecialchars( $fileUrls, ENT_QUOTES );
+
+		$gallery = '<gallery
+		data-hovergallery-maxhoverwidth="' . $maxhoverwidth . '"
+		data-hovergallery-maxhoverheight="' . $maxhoverheight . '"
+		data-hovergallery-fileurls="' . $fileUrls . '">' . $input . '</gallery>';
+
+		return $parser->recursiveTagParse( $gallery );
 	}
 }

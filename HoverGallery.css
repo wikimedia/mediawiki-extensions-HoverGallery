@@ -1,7 +1,8 @@
-div.hovergallery img {
+.hoverimage {
 	border-radius: 5px;
-	display: none;
 	pointer-events: none;
 	position: fixed;
-	z-index: 99;
+	top: 20px;
+	left: 20px;
+	z-index: 2147483647; /* Max possible value */
 }
