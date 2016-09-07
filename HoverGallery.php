@@ -1,48 +1,25 @@
 <?php
 
-class HoverGallery {
+$wgExtensionCredits['parserhook'][] = array(
+	'path' => __FILE__,
+	'name' => 'HoverGallery',
+	'descriptionmsg' => 'hovergallery-desc',
+	'version' => '1.0',
+	'author' => '[http://mediawiki.org/wiki/User:Felipe_Schenone Felipe Schenone]',
+	'url' => 'https://www.mediawiki.org/wiki/Extension:HoverGallery',
+);
 
-	static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
-		$out->addModules( 'ext.HoverGallery' );
-		return true;
-	}
+$wgResourceModules['ext.HoverGallery'] = array(
+	'scripts' => 'HoverGallery.js',
+	'styles' => 'HoverGallery.css',
+	'position' => 'top',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'Hovergallery',
+);
 
-	static function onParserFirstCallInit( Parser &$parser ) {
-		$parser->setHook( 'hovergallery', 'HoverGallery::render' );
-		return true;
-	}
+$wgMessagesDirs['HoverGallery'] = __DIR__ . '/i18n';
+$wgExtensionMessagesFiles['HoverGallery'] = __DIR__ . '/HoverGallery.i18n.php';
+$wgAutoloadClasses['HoverGallery'] = __DIR__ . '/HoverGallery.body.php';
 
-	static function render( $input, array $ARGS, Parser $parser, PPFrame $frame ) {
-
-		$maxhoverwidth = 640;
-		$maxhoverheight = 640;
-		if ( array_key_exists( 'maxhoversize', $ARGS ) ) {
-			$maxhoverwidth = $ARGS['maxhoversize'];
-			$maxhoverheight = $ARGS['maxhoversize'];
-		}
-		if ( array_key_exists( 'maxhoverwidth', $ARGS ) ) {
-			$maxhoverwidth = $ARGS['maxhoverwidth'];
-		}
-		if ( array_key_exists( 'maxhoverheight', $ARGS ) ) {
-			$maxhoverheight = $ARGS['maxhoverheight'];
-		}
-
-		$FILEURLS = array();
-		$FILENAMES = array_filter( explode( PHP_EOL, trim( $input ) ) );
-		foreach ( $FILENAMES as $filename ) {
-			$title = Title::newFromText( $filename );
-			$file = wfLocalFile( $title );
-			$FILEURLS[] = $file->getFullUrl();
-		}
-
-		$fileUrls = json_encode( $FILEURLS );
-		$fileUrls = htmlspecialchars( $fileUrls, ENT_QUOTES );
-
-		$gallery = '<gallery
-		data-hovergallery-maxhoverwidth="' . $maxhoverwidth . '"
-		data-hovergallery-maxhoverheight="' . $maxhoverheight . '"
-		data-hovergallery-fileurls="' . $fileUrls . '">' . $input . '</gallery>';
-
-		return $parser->recursiveTagParse( $gallery );
-	}
-}
+$wgHooks['BeforePageDisplay'][] = 'HoverGallery::onBeforePageDisplay';
+$wgHooks['ParserFirstCallInit'][] = 'HoverGallery::onParserFirstCallInit';

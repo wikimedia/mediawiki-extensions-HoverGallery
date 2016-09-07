@@ -11,7 +11,7 @@
 		]
 	},
 	"AutoloadClasses": {
-		"HoverGallery": "HoverGallery.php"
+		"HoverGallery": "HoverGallery.body.php"
 	},
 	"ResourceModules": {
 		"ext.HoverGallery": {
