@@ -1,8 +1,8 @@
 .hoverimage {
-	border-radius: 5px;
 	pointer-events: none;
 	position: fixed;
-	top: 20px;
-	left: 20px;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50% );
 	z-index: 2147483647; /* Max possible value */
 }
