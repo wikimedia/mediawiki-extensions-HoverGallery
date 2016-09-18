@@ -1,4 +1,6 @@
 .hoverimage {
+	background: white;
+	padding: 1em;
 	pointer-events: none;
 	position: fixed;
 	top: 50%;

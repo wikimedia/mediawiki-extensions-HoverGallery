@@ -9,6 +9,11 @@ var HoverGallery = {
 	},
 
 	onMouseEnter: function () {
+		// First show the loading icon
+		var loadingUrl = mw.config.get( 'wgExtensionAssetsPath' ) + '/hovergallery/images/loading.gif',
+			loadingImg = $( '<img>' ).addClass( 'hoverimage' ).attr( 'src', loadingUrl );
+		$( 'body' ).append( loadingImg );
+
 		var gallery = $( this ).closest( '.gallery' ),
 			fileUrls = gallery.data( 'hovergallery-fileurls' ),
 			maxHoverWidth = gallery.data( 'hovergallery-maxhoverwidth' ),
@@ -20,13 +25,14 @@ var HoverGallery = {
 
 		// Get the corresponding URL and build the image
 		var url = fileUrls[ thumbIndex ],
-			image = $( '<img>' ).attr( 'src', url ).addClass( 'hoverimage' ).css({
-				'max-width': maxHoverWidth + 'px',
-				'max-height': maxHoverHeight + 'px'
-			});
-
-		// Show the image
-		$( 'body' ).append( image );
+			image = new Image();
+			image.src = url;
+			image.onload = function () {
+				loadingImg.css({
+					'max-width': maxHoverWidth + 'px',
+					'max-height': maxHoverHeight + 'px'
+				}).attr( 'src', url );
+			};
 	},
 
 	onMouseLeave: function () {
