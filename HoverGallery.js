@@ -10,10 +10,11 @@ var HoverGallery = {
 
 	onMouseEnter: function () {
 		// First show the loading icon
-		var loadingUrl = mw.config.get( 'wgExtensionAssetsPath' ) + '/hovergallery/images/loading.gif',
+		var loadingUrl = mw.config.get( 'wgExtensionAssetsPath' ) + '/Hovergallery/images/loading.gif',
 			loadingImg = $( '<img>' ).addClass( 'hoverimage' ).attr( 'src', loadingUrl );
 		$( 'body' ).append( loadingImg );
 
+		// Get the data from the gallery
 		var gallery = $( this ).closest( '.gallery' ),
 			fileUrls = gallery.data( 'hovergallery-fileurls' ),
 			maxHoverWidth = gallery.data( 'hovergallery-maxhoverwidth' ),
@@ -21,18 +22,19 @@ var HoverGallery = {
 
 		// Determine which of the thumbs is it
 		var thumbs = $( 'img', gallery ),
-			thumbIndex = $.inArray( this, thumbs );
+			thumbIndex = $.inArray( this, thumbs ),
+			url = fileUrls[ thumbIndex ],
+			url = $( '<span>' ).html( url ).text(); // Decode the HTML entities in the URL
 
-		// Get the corresponding URL and build the image
-		var url = fileUrls[ thumbIndex ],
-			image = new Image();
-			image.src = url;
-			image.onload = function () {
-				loadingImg.css({
-					'max-width': maxHoverWidth + 'px',
-					'max-height': maxHoverHeight + 'px'
-				}).attr( 'src', url );
-			};
+		// Replace the loading icon with the image
+		var image = new Image();
+		image.src = url;
+		image.onload = function () {
+			loadingImg.css({
+				'max-width': maxHoverWidth + 'px',
+				'max-height': maxHoverHeight + 'px'
+			}).attr( 'src', url );
+		};
 	},
 
 	onMouseLeave: function () {

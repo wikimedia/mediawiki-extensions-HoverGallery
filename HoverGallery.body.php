@@ -31,9 +31,9 @@ class HoverGallery {
 		$FILENAMES = array_filter( explode( PHP_EOL, trim( $input ) ) );
 		foreach ( $FILENAMES as $filename ) {
 			$filename = strtok( $filename, '|' ); // Remove the options
-			$title = Title::newFromText( $filename, NS_FILE );
-			$file = wfLocalFile( $title );
-			$FILEURLS[] = $file->getFullUrl();
+			$filename = substr( $filename, ( $position = strpos( $filename, ':' ) ) === false ? 0 : $position + 1 ); // Remove the File prefix
+			$filepath = $parser->recursiveTagParse( '{{filepath:' . $filename . '|nowiki}}' ); // Get the filepath
+			$FILEURLS[] = $filepath;
 		}
 
 		$fileUrls = json_encode( $FILEURLS );
