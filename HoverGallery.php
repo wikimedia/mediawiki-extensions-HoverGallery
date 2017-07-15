@@ -18,7 +18,6 @@ $wgResourceModules['ext.HoverGallery'] = array(
 );
 
 $wgMessagesDirs['HoverGallery'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['HoverGallery'] = __DIR__ . '/HoverGallery.i18n.php';
 $wgAutoloadClasses['HoverGallery'] = __DIR__ . '/HoverGallery.body.php';
 
 $wgHooks['BeforePageDisplay'][] = 'HoverGallery::onBeforePageDisplay';
