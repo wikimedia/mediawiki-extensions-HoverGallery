@@ -12,7 +12,6 @@ $wgExtensionCredits['parserhook'][] = array(
 $wgResourceModules['ext.HoverGallery'] = array(
 	'scripts' => 'HoverGallery.js',
 	'styles' => 'HoverGallery.css',
-	'position' => 'top',
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'Hovergallery',
 );

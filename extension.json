@@ -16,8 +16,7 @@
 	"ResourceModules": {
 		"ext.HoverGallery": {
 			"scripts": "HoverGallery.js",
-			"styles": "HoverGallery.css",
-			"position": "top"
+			"styles": "HoverGallery.css"
 		}
 	},
 	"ResourceFileModulePaths": {
