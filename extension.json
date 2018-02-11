@@ -1,7 +1,7 @@
 {
 	"name": "HoverGallery",
 	"version": "1.0",
-	"author": "[http://mediawiki.org/wiki/User:Felipe_Schenone Felipe Schenone]",
+	"author": "[http://mediawiki.org/wiki/User:Sophivorus Felipe Schenone]",
 	"url": "https://www.mediawiki.org/wiki/Extension:HoverGallery",
 	"descriptionmsg": "hovergallery-desc",
 	"type": "parserhook",
@@ -11,7 +11,7 @@
 		]
 	},
 	"AutoloadClasses": {
-		"HoverGallery": "HoverGallery.body.php"
+		"HoverGallery": "HoverGallery.php"
 	},
 	"ResourceModules": {
 		"ext.HoverGallery": {
