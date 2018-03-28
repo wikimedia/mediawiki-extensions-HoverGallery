@@ -6,7 +6,7 @@
 		},
 
 		bind: function () {
-			$( '.gallery img' ).hover( HoverGallery.onMouseEnter, HoverGallery.onMouseLeave );
+			$( '.hovergallery img' ).hover( HoverGallery.onMouseEnter, HoverGallery.onMouseLeave );
 		},
 
 		onMouseEnter: function () {
@@ -16,7 +16,7 @@
 			$( 'body' ).append( loadingImg );
 
 			// Get the data from the gallery
-			var gallery = $( this ).closest( '.gallery' ),
+			var gallery = $( this ).closest( '.hovergallery' ),
 				fileUrls = gallery.data( 'hovergallery-fileurls' ),
 				maxHoverWidth = gallery.data( 'hovergallery-maxhoverwidth' ),
 				maxHoverHeight = gallery.data( 'hovergallery-maxhoverheight' );

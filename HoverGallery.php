@@ -39,7 +39,7 @@ class HoverGallery {
 		$fileUrls = json_encode( $FILEURLS );
 		$fileUrls = htmlspecialchars( $fileUrls, ENT_QUOTES );
 
-		$gallery = '<gallery
+		$gallery = '<gallery class="hovergallery"
 		data-hovergallery-maxhoverwidth="' . $maxhoverwidth . '"
 		data-hovergallery-maxhoverheight="' . $maxhoverheight . '"
 		data-hovergallery-fileurls="' . $fileUrls . '">' . $input . '</gallery>';
