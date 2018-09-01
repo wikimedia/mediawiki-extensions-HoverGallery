@@ -12,6 +12,9 @@ class HoverGallery {
 		return true;
 	}
 
+	/**
+	 * @suppress SecurityCheck-DoubleEscaped
+	 */
 	static function render( $input, array $ARGS, Parser $parser, PPFrame $frame ) {
 
 		$maxhoverwidth = 640;
