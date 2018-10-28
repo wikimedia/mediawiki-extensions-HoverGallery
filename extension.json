@@ -4,6 +4,7 @@
 	"author": "[https://www.mediawiki.org/wiki/User:Sophivorus Felipe Schenone]",
 	"url": "https://www.mediawiki.org/wiki/Extension:HoverGallery",
 	"descriptionmsg": "hovergallery-desc",
+	"license-name": "GPL-3.0-or-later",
 	"type": "parserhook",
 	"MessagesDirs": {
 		"HoverGallery": [
