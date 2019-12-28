@@ -1,4 +1,5 @@
-( function ( $, mw ) {
+/* eslint-disable */
+( function () {
 	var HoverGallery = {
 
 		init: function () {
@@ -6,7 +7,7 @@
 		},
 
 		bind: function () {
-			$( '.hovergallery img' ).hover( HoverGallery.onMouseEnter, HoverGallery.onMouseLeave );
+			$( '.hovergallery img' ).on( 'hover', HoverGallery.onMouseEnter, HoverGallery.onMouseLeave );
 		},
 
 		onMouseEnter: function () {
@@ -19,22 +20,22 @@
 			var gallery = $( this ).closest( '.hovergallery' ),
 				fileUrls = gallery.data( 'hovergallery-fileurls' ),
 				maxHoverWidth = gallery.data( 'hovergallery-maxhoverwidth' ),
-				maxHoverHeight = gallery.data( 'hovergallery-maxhoverheight' );
+				maxHoverHeight = gallery.data( 'hovergallery-maxhoverheight' ),
 
-			// Determine which of the thumbs is it
-			var thumbs = $( 'img', gallery ),
+				// Determine which of the thumbs is it
+				thumbs = $( 'img', gallery ),
 				thumbIndex = $.inArray( this, thumbs ),
 				fileUrl = fileUrls[ thumbIndex ],
-				url = $( '<span>' ).html( fileUrl ).text(); // Decode the HTML entities in the URL
+				url = $( '<span>' ).html( fileUrl ).text(), // Decode the HTML entities in the URL
 
-			// Replace the loading icon with the image
-			var image = new Image();
+				// Replace the loading icon with the image
+				image = new Image();
 			image.src = url;
 			image.onload = function () {
-				loadingImg.css({
+				loadingImg.css( {
 					'max-width': maxHoverWidth + 'px',
 					'max-height': maxHoverHeight + 'px'
-				}).attr( 'src', url );
+				} ).attr( 'src', url );
 			};
 		},
 
@@ -44,4 +45,4 @@
 	};
 
 	$( HoverGallery.init );
-}( jQuery, mediaWiki ) );
+}() );

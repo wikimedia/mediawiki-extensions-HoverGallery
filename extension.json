@@ -16,13 +16,13 @@
 	},
 	"ResourceModules": {
 		"ext.HoverGallery": {
-			"scripts": "HoverGallery.js",
-			"styles": "HoverGallery.css"
+			"scripts": "js/HoverGallery.js",
+			"styles": "css/HoverGallery.css"
 		}
 	},
 	"ResourceFileModulePaths": {
-		"localBasePath": "",
-		"remoteExtPath": "HoverGallery"
+		"localBasePath": "resources",
+		"remoteExtPath": "HoverGallery/resources"
 	},
 	"Hooks": {
 		"BeforePageDisplay": "HoverGallery::onBeforePageDisplay",
