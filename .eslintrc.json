@@ -7,5 +7,13 @@
 	"globals": {
 		"mw": false,
 		"OO": false
+	},
+	"rules": {
+		"indent": "off",
+		"no-jquery/no-in-array": "off",
+		"no-jquery/no-global-selector": "off",
+		"no-jquery/variable-pattern": "off",
+		"one-var": "off",
+		"vars-on-top": "off"
 	}
 }
