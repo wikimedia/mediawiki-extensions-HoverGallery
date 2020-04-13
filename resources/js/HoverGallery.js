@@ -11,7 +11,7 @@
 
 		onMouseEnter: function () {
 			// First show the loading icon
-			var loadingUrl = mw.config.get( 'wgExtensionAssetsPath' ) + '/Hovergallery/images/loading.gif',
+			var loadingUrl = mw.config.get( 'wgExtensionAssetsPath' ) + '/Hovergallery/resources/images/loading.gif',
 				loadingImg = $( '<img>' ).addClass( 'hoverimage' ).attr( 'src', loadingUrl );
 			$( 'body' ).append( loadingImg );
 
