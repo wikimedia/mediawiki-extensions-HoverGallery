@@ -29,8 +29,9 @@
 
 				// Replace the loading icon with the image
 				image = new Image();
-				image.src = url;
-				image.onload = function () {
+
+			image.src = url;
+			image.onload = function () {
 				loadingImg.css( {
 					'max-width': maxHoverWidth + 'px',
 					'max-height': maxHoverHeight + 'px'
