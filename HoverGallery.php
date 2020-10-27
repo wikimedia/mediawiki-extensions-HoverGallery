@@ -60,8 +60,32 @@ class HoverGallery {
 		$gallery = '<gallery class="hovergallery"
 		data-hovergallery-maxhoverwidth="' . $maxhoverwidth . '"
 		data-hovergallery-maxhoverheight="' . $maxhoverheight . '"
-		data-hovergallery-fileurls="' . $fileUrls . '">' . $input . '</gallery>';
+		data-hovergallery-fileurls="' . $fileUrls . '"';
 
+		// Add all the standard gallery parameters
+		if ( array_key_exists( 'mode', $args ) ) {
+			$gallery .= ' mode="' . $args['mode'] . '"';
+		}
+		if ( array_key_exists( 'caption', $args ) ) {
+			$gallery .= ' caption="' . $args['caption'] . '"';
+		}
+		if ( array_key_exists( 'showfilename', $args ) ) {
+			$gallery .= ' showfilename="' . $args['showfilename'] . '"';
+		}
+		if ( array_key_exists( 'showthumbnails', $args ) ) {
+			$gallery .= ' showthumbnails="' . $args['showthumbnails'] . '"';
+		}
+		if ( array_key_exists( 'perrow', $args ) ) {
+			$gallery .= ' perrow="' . $args['perrow'] . '"';
+		}
+		if ( array_key_exists( 'widths', $args ) ) {
+			$gallery .= ' widths="' . $args['widths'] . '"';
+		}
+		if ( array_key_exists( 'heights', $args ) ) {
+			$gallery .= ' heights="' . $args['heights'] . '"';
+		}
+
+		$gallery .= '>' . $input . '</gallery>';
 		return $parser->recursiveTagParse( $gallery );
 	}
 }
