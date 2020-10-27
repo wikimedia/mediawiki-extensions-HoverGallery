@@ -6,12 +6,12 @@
 		},
 
 		bind: function () {
-			$( '.hovergallery img' ).on( 'hover', HoverGallery.onMouseEnter, HoverGallery.onMouseLeave );
+			$( '.hovergallery img' ).hover( HoverGallery.onMouseEnter, HoverGallery.onMouseLeave );
 		},
 
 		onMouseEnter: function () {
 			// First show the loading icon
-			var loadingUrl = mw.config.get( 'wgExtensionAssetsPath' ) + '/Hovergallery/resources/images/loading.gif',
+			var loadingUrl = mw.config.get( 'wgExtensionAssetsPath' ) + '/HoverGallery/resources/images/loading.gif',
 				loadingImg = $( '<img>' ).addClass( 'hoverimage' ).attr( 'src', loadingUrl );
 			$( 'body' ).append( loadingImg );
 
