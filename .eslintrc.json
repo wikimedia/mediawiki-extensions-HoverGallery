@@ -8,7 +8,6 @@
 	"rules": {
 		"no-jquery/no-in-array": "off",
 		"no-jquery/no-global-selector": "off",
-		"no-jquery/variable-pattern": "off",
-		"vars-on-top": "off"
+		"no-jquery/variable-pattern": "off"
 	}
 }
