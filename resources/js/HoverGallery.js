@@ -6,7 +6,8 @@
 		},
 
 		bind: function () {
-			$( '.hovergallery img' ).on( 'hover', HoverGallery.onMouseEnter, HoverGallery.onMouseLeave );
+			$( '.hovergallery img' ).on( 'mouseenter', HoverGallery.onMouseEnter );
+			$( '.hovergallery img' ).on( 'mouseleave', HoverGallery.onMouseLeave );
 		},
 
 		onMouseEnter: function () {
