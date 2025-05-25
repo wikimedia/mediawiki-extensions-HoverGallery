@@ -12,12 +12,12 @@
 
 		onMouseEnter: function () {
 			// First show the loading icon
-			var loadingUrl = mw.config.get( 'wgExtensionAssetsPath' ) + '/HoverGallery/resources/images/loading.gif',
+			const loadingUrl = mw.config.get( 'wgExtensionAssetsPath' ) + '/HoverGallery/resources/images/loading.gif',
 				loadingImg = $( '<img>' ).addClass( 'hoverimage' ).attr( 'src', loadingUrl );
 			$( 'body' ).append( loadingImg );
 
 			// Get the data from the gallery
-			var gallery = $( this ).closest( '.hovergallery' ),
+			const gallery = $( this ).closest( '.hovergallery' ),
 				fileUrls = gallery.data( 'hovergallery-fileurls' ),
 				maxHoverWidth = gallery.data( 'hovergallery-maxhoverwidth' ),
 				maxHoverHeight = gallery.data( 'hovergallery-maxhoverheight' ),
